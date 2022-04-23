@@ -1,6 +1,9 @@
+import subprocess
+import sys
+
 import pkg_resources
 
-requierd = {'random', 'matplotlib', 'numpy'}
+requierd = {'matplotlib', 'numpy'}
 installed = {pkg.key for pkg in pkg_resources.working_set}
 missing = requierd - installed
 if missing:
